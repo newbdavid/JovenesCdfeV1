@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">JovenesCdfeFull</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="menu_opcion1">Música</string>
+    <string name="menu_opcion2">Cancionero</string>
+    <string name="menu_opcion3">Reproducción de Videos</string>
+    <string name="menu_opcion4">Publicaciones en Facebook</string>
+    <string name="menu_opcion5">Calendario Reuniones</string>
+    <string name="menu_opcion6">Ingresar Fechas</string>
+    <string name="menu_opcion7">Enseñanzas</string>
+    <string name="menu_opcion8">Versiculo diario</string>
+</resources>
