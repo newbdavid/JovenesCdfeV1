@@ -16,6 +16,7 @@ import java.util.List;
 
 public class Cancionero extends AppCompatActivity {
     ListView cancion;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +24,7 @@ public class Cancionero extends AppCompatActivity {
         cancion = (ListView) findViewById(R.id.list_view_letras);
     }
 
-    public void cargarLetra (View view){
+    public void cargarVersiculo (View view){
         List<String> letraCancion = new ArrayList<String>();
         String linea;
         InputStream is = this.getResources().openRawResource(R.raw.gracia_sublime_r);

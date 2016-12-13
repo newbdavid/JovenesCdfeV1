@@ -13,4 +13,5 @@
     <string name="menu_opcion8">Versiculo diario</string>
     <string name="cargar_datos">Cargar Letra</string>
     <string name="cargar_ensenanza">Cargar ensenanza</string>
+    <string name="cargar_versiculo">Cargar versiculos</string>
 </resources>

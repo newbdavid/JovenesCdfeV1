@@ -18,17 +18,16 @@
         android:textSize="@dimen/label"
         />
 
-    <TextView
-        android:layout_width="match_parent"
+    <Button
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Jeremias 29:11"
-        android:textSize="@dimen/edit"
-        />
+        android:text="@string/cargar_versiculo"
+        android:layout_gravity="center"
+        android:onClick="cargarVersiculo"/>
 
-    <TextView
+    <ListView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Porque yo sé los pensamientos que tengo acerca de vosotros, dice Jehová, pensamientos de paz, y no de mal, para daros el fin que esperáis."/>
-
+        android:layout_height="match_parent"
+        android:id="@+id/list_view_versiculo"/>
 
 </LinearLayout>
