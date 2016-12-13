@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
@@ -16,13 +17,18 @@ import java.util.List;
 
 public class Cancionero extends AppCompatActivity {
     ListView cancion;
-    
+    Spinner spinnerCancion;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cancionero);
         cancion = (ListView) findViewById(R.id.list_view_letras);
+        spinnerCancion = (Spinner) findViewById(R.id.spinner_cancion);
+
+
     }
+
+
 
     public void cargarVersiculo (View view){
         List<String> letraCancion = new ArrayList<String>();
