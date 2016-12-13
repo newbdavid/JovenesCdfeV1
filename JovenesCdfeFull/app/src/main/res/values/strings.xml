@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">JovenesCdfeFull</string>
 
-    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_button">Iniciar</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="menu_opcion1">Música</string>
     <string name="menu_opcion2">Cancionero</string>
@@ -11,4 +11,6 @@
     <string name="menu_opcion6">Ingresar Fechas</string>
     <string name="menu_opcion7">Enseñanzas</string>
     <string name="menu_opcion8">Versiculo diario</string>
+    <string name="cargar_datos">Cargar Letra</string>
+    <string name="cargar_ensenanza">Cargar ensenanza</string>
 </resources>

@@ -10,4 +10,16 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="ec.edu.epn.jovenescdfefull.Ensenanzas">
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cargar_datos"
+        android:layout_gravity="center"
+        android:onClick="cargarEnsenanza"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/list_view_letras"></ListView>
+
 </RelativeLayout>
