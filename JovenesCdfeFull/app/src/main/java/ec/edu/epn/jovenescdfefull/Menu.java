@@ -44,12 +44,17 @@ public class Menu extends AppCompatActivity {
     }
 
     public void videos (View view){
-        Intent i = new Intent(this,Videos.class);
+        Intent i = new Intent(this,Video.class);
         startActivity(i);
     }
 
     public void musica (View view){
         Intent i = new Intent(this,Musica.class);
+        startActivity(i);
+    }
+
+    public void registrar (View view){
+        Intent i = new Intent(this,Registro.class);
         startActivity(i);
     }
 }

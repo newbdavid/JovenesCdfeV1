@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ec.edu.epn.jovenescdfefull">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -26,8 +30,9 @@
         <activity android:name=".PublicacionesFacebook" />
         <activity android:name=".TusVersiculos" />
         <activity android:name=".Musica" />
-        <activity android:name=".Videos" />
-        <activity android:name=".IngresarFechas"></activity>
+        <activity android:name=".Video" />
+        <activity android:name=".IngresarFechas" />
+        <activity android:name=".Registro"></activity>
     </application>
 
 </manifest>
