@@ -16,10 +16,12 @@
         android:text="Video de la semana"
         />
 
-    <VideoView
-        android:layout_width="wrap_content"
+
+
+    <com.google.android.youtube.player.YouTubePlayerView
+        android:id="@+id/youtube_player"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/videoView"
-        android:layout_weight="1" />
+        android:background="#fff"/>
 
 </RelativeLayout>

@@ -1,11 +1,8 @@
 package ec.edu.epn.jovenescdfefull;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-
 import android.database.sqlite.SQLiteDatabase;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;

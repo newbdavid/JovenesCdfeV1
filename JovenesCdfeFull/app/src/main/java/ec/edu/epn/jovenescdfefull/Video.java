@@ -1,25 +1,95 @@
 package ec.edu.epn.jovenescdfefull;
 
-import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.MediaController;
-import android.widget.VideoView;
+import android.widget.Toast;
 
-public class Video extends AppCompatActivity {
+import com.google.android.youtube.player.YouTubeBaseActivity;
+import com.google.android.youtube.player.YouTubeInitializationResult;
+import com.google.android.youtube.player.YouTubePlayer;
+import com.google.android.youtube.player.YouTubePlayer.ErrorReason;
+import com.google.android.youtube.player.YouTubePlayer.PlaybackEventListener;
+import com.google.android.youtube.player.YouTubePlayer.PlayerStateChangeListener;
+import com.google.android.youtube.player.YouTubePlayer.Provider;
+import com.google.android.youtube.player.YouTubePlayerView;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_videos);
+public class Video extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
 
-        VideoView videoView =(VideoView)findViewById(R.id.videoView);
-        MediaController mediaController= new MediaController(this);
-        mediaController.setAnchorView(videoView);
-        Uri uri=Uri.parse("rtsp://r1---sn-q4fl6ney.googlevideo.com/Cj0LENy73wIaNAl5UeO2h2AIgBMYDSANFC0T809YMOCoAUIASARgj4q3qoPd-adYigELUXpyNFFCWktES2sM/73A96239D9175B34BCFBDD6872EF1DBA39AAD1F2.105E2AEF8F83FCFBBCEEC3A8EA3082020B6D8537/yt6/1/video.3gp");
-        videoView.setMediaController(mediaController);
-        videoView.setVideoURI(uri);
-        videoView.requestFocus();
-        videoView.start();
+
+
+
+        public static final String API_KEY = " AIzaSyCe8zH_gvsO2zoMJc29RbF7LZJAkHEJN4M ";
+        public static final String VIDEO_ID = "XFRjr_x-yxU";
+
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_videos);
+/** Initializing YouTube Player View **/
+            YouTubePlayerView youTubePlayerView = (YouTubePlayerView) findViewById(R.id.youtube_player);
+            youTubePlayerView.initialize(API_KEY, this);
+        }
+
+        @Override
+        public void onInitializationFailure(Provider provider, YouTubeInitializationResult result) {
+            Toast.makeText(this, "Failured to Initialize!", Toast.LENGTH_LONG).show();
+        }
+
+        @Override
+        public void onInitializationSuccess(Provider provider, YouTubePlayer player, boolean wasRestored) {
+/** add listeners to YouTubePlayer instance **/
+            player.setPlayerStateChangeListener(playerStateChangeListener);
+            player.setPlaybackEventListener(playbackEventListener);
+/** Start buffering **/
+            if (!wasRestored) {
+                player.cueVideo(VIDEO_ID);
+            }
+        }
+
+        private PlaybackEventListener playbackEventListener = new PlaybackEventListener() {
+            @Override
+            public void onBuffering(boolean arg0) {
+            }
+
+            @Override
+            public void onPaused() {
+            }
+
+            @Override
+            public void onPlaying() {
+            }
+
+            @Override
+            public void onSeekTo(int arg0) {
+            }
+
+            @Override
+            public void onStopped() {
+            }
+        };
+        private PlayerStateChangeListener playerStateChangeListener = new PlayerStateChangeListener() {
+            @Override
+            public void onAdStarted() {
+            }
+
+            @Override
+            public void onError(ErrorReason arg0) {
+            }
+
+            @Override
+            public void onLoaded(String arg0) {
+            }
+
+            @Override
+            public void onLoading() {
+            }
+
+            @Override
+            public void onVideoEnded() {
+            }
+
+            @Override
+            public void onVideoStarted() {
+            }
+        };
     }
-}
+

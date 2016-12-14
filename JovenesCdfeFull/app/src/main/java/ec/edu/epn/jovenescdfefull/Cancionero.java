@@ -30,7 +30,7 @@ public class Cancionero extends AppCompatActivity {
 
 
 
-    public void cargarVersiculo (View view){
+    public void cargarLetra (View view){
         List<String> letraCancion = new ArrayList<String>();
         String linea;
         InputStream is = this.getResources().openRawResource(R.raw.gracia_sublime_r);
