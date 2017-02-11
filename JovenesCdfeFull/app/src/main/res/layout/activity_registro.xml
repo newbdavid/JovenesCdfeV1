@@ -11,23 +11,12 @@
     android:orientation="vertical"
     tools:context="ec.edu.epn.jovenescdfefull.Registro">
 
-    <TextView
+    <Spinner
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Identificación"
-        android:id="@+id/id_textidentificacion"
-        android:textSize="26sp"
-        android:gravity="center"
-        />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/img_id"
-        android:text=""
-        android:id="@+id/id_identificacion"
-        android:textSize="26sp"
-        android:gravity="center"
-        />
+        android:layout_height="wrap_content">
+        android:text="Seleccione un Usuario"
+    </Spinner>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -62,5 +51,77 @@
         android:textSize="26sp"
         android:gravity="center"
         />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Telefono"
+        android:textSize="26sp"
+        android:gravity="center"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/img_id"
+        android:text=""
+        android:id="@+id/id_telefono"
+        android:textSize="26sp"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edad"
+        android:textSize="26sp"
+        android:gravity="center"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/img_id"
+        android:text=""
+        android:id="@+id/id_edad"
+        android:textSize="26sp"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sector"
+        android:textSize="26sp"
+        android:gravity="center"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/img_id"
+        android:text=""
+        android:id="@+id/id_sector"
+        android:textSize="26sp"
+        android:gravity="center"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="Actualizar"
+            android:onClick="actualizarUsr"
+            android:gravity="center"/>
+        <Button
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="Eliminar"
+            android:onClick="eliminarUsr"
+            android:gravity="center"/>
+
+    </LinearLayout>
 
 </LinearLayout>
